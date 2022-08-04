@@ -3,7 +3,7 @@ import requests
 
 def main():
 	
-	files = open('./data/portalDAppsList.json')
+	files = open('./data/PortalDAppsList.json')
 	portalDApps = json.load(files)
 	# Not all of these work when imported into Retool for some reason
 	# 'gem', 'curv'
@@ -29,7 +29,7 @@ def main():
 						contractList['networkName'] = "EthereumMainnet"
 						contracts.append(contractList)
 
-	with open('./data/Data.json', 'w') as outfile:
+	with open('./data/ContractData.json', 'w') as outfile:
 		json.dump(contracts, outfile)
 
 def TRMVerification(address, network):

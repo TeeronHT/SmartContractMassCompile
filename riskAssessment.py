@@ -2,12 +2,12 @@ import json
 import csv
 
 def main():
-    files = open('./data/Data.json')
-    dAppContracts = json.load(files)
+    files = open('./data/ContractData.json')
+    dAppContractList = json.load(files)
 
     associatedRisk = []
 
-    for contracts in range(len(dAppContracts)):
+    for contracts in range(len(dAppContractList)):
         address = dAppContracts[contracts]["contractAddress"]
         TRMVerification(address, 'ethereum', associatedRisk)
 
@@ -29,9 +29,7 @@ def TRMVerification(address, network, associatedRisk):
 
 def riskCSV(data, address, associatedRisk):
     
-    # The below
-
-    files = open('./data/Data.json')
+    files = open('./data/ContractData.json')
     dAppContracts = json.load(files)
 
     length = len(data[0]['addressRiskIndicators'])
@@ -58,7 +56,7 @@ def riskCSV(data, address, associatedRisk):
     associatedRisk.append(contract)
 
 def writeCSV(associatedRisk):
-    data_file = open('./data/Data.csv', 'w', newline='')
+    data_file = open('./data/RiskData.csv', 'w', newline='')
     csv_writer = csv.writer(data_file)
      
     count = 0
