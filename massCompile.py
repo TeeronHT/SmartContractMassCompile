@@ -3,7 +3,7 @@ import requests
 
 def main():
 	
-	files = open('./data/PortalDAppsList.json')
+	files = open('./data/PortalDApps.json')
 	portalDApps = json.load(files)
 	# Not all of these work when imported into Retool for some reason
 	# 'gem', 'curv'
