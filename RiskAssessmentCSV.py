@@ -19,7 +19,7 @@ def TRMVerification(address, network, associatedRisk):
 
     payload = [{"address": address, "chain": network}]
     headers = {"Content-Type": "application/json"}
-    response = requests.post(url, json=payload, headers=headers, auth=('a02b3ef5-bc27-4b0d-a7b2-1093c0c0e41b','a02b3ef5-bc27-4b0d-a7b2-1093c0c0e41b'))
+    response = requests.post(url, json=payload, headers=headers, auth=('<API_KEY>','<API_KEY>'))
 
     data = response.json()
 
