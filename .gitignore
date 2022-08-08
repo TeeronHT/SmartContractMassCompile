@@ -1,3 +1,4 @@
 a.out
 .*
 !/.gitignore
+.Rproj.user
