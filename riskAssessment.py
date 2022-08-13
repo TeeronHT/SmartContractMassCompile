@@ -23,8 +23,6 @@ def TRMVerification(address, network, associatedRisk):
 
     data = response.json()
 
-    length = len(data[0]['addressRiskIndicators'])
-
     riskCSV(data, address, associatedRisk)
 
 def riskCSV(data, address, associatedRisk):
